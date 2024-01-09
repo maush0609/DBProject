@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+	<head>
+		<title>Login Beauty Critic</title>
+		<link rel="stylesheet" href="../static/stylelogin.css">
+	</head>
+    <body>
+		<div class = "banner">
+			<div class = "nav">
+				<h1>
+					Your guide to flawless choices...
+				</h1>
+            </div>
+            <div class = "login">
+                <h2>
+                    LogIn
+                </h2>
+                <form action="">
+                    <p>User Name</p>
+                    <input type="text" name="user" placeholder="User Name">
+                    <p>Password</p>
+                    <input type="password" name="password" placeholder="Password">
+                    <button type="submit"><a href="{{url_for('form')}}">login</a></button><br>
+                    <a href="{{url_for('signin')}}">Don't have an account? Sign up</a>
+                </form>
+            </div>
+        </div>
+    </body>
+<html
