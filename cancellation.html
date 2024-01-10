@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airline Cancellation Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('img2.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.412);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      width: 300px;
+      text-align: center;
+    }
+    label{
+        display: block;
+        text-align: left;
+    }
+
+    input, button {
+      margin: 10px 0;
+      padding: 8px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: white;
+      border: 2px solid #4caf50;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .container h1{
+        text-align: left;
+    }
+    .container p{
+        text-align: left;
+    }
+    button:hover {
+      background-color: #45a049; /* Change the color on hover */
+      border-color: #707070;
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cancellation</h1>
+        <p>
+          Wish to cancel your booking?
+        </p>
+        <p>
+          Enter your PNR/Booking reference number, mention your email ID/Last name, and proceed for cancellation.
+        </p>
+        <br>
+        <form id="cancellationForm">
+            <label for="bookingCode">PNR/Booking Reference: *</label>
+            <input type="text" id="bookingCode" name="bookingCode" placeholder="Enter PNR/Booking Reference" required>
+      
+            <label for="email">Email/Last Name: *</label>
+            <input type="text" id="email" name="email" placeholder="Enter Email/Last Name" required>
+      
+            <button type="button" onclick="cancelBooking()">Cancel Booking</button>
+          </form>
+      </div>
+      
+
+      <script>
+        function cancelBooking() {
+          var form = document.getElementById("cancellationForm");
+          var bookingCode = document.getElementById("bookingCode");
+          var email = document.getElementById("email");
+      
+          // Check if either bookingCode or email is empty
+          if (!bookingCode.value || !email.value) {
+            // Display a popup message
+            alert("Please enter both PNR/Booking Reference and Email/Last Name.");
+          } else {
+            // Perform cancellation logic (you can replace this with actual cancellation code).
+            console.log("Cancellation - Booking Code:", bookingCode.value);
+            console.log("Cancellation - Email:", email.value);
+            alert("Cancellation Successful!!");
+            
+            // Reset the form
+            form.reset();
+          }
+        }
+      </script>      
+</body>
+</html>
